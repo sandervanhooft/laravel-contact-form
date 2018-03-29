@@ -1,0 +1,24 @@
+{
+    "name": "sandervanhooft/laravel-contact-form",
+    "description": "A simple contact form for Laravel.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Sander van Hooft",
+            "email": "info@sandervanhooft.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "SanderVanHooft\\ContactForm\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "SanderVanHooft\\ContactForm\\ServiceProvider"
+            ]
+        }
+    }
+}
