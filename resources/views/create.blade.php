@@ -1,25 +1,32 @@
-@if(1 === 0)
-    @extends('layouts.app')
-@endif
+@extends('layouts.app')
 
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                {{-- <div class="card-header">Contact us</div> --}}
 
                 <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success">
-                            {{ session('status') }}
-                        </div>
-                    @endif
 
                     {{-- ACTUAL CONTACT FORM STARTS HERE --}}
-                    <form class="form-horizontal" action="" method="post">
+                    <form class="form-horizontal" action="{{ route('contactform.create') }}" method="post">
+                        @csrf
                         <fieldset>
                         <legend class="text-center">Contact us</legend>
+                        @if (session('status'))
+                            <div class="alert alert-success">
+                                {{ session('status') }}
+                            </div>
+                        @endif
+                        @if ($errors->any())
+                            <div class="alert alert-danger">
+                                <ul>
+                                    @foreach ($errors->all() as $error)
+                                        <li>{{ $error }}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        @endif
 
                         <!-- Name input-->
                         <div class="form-group">
@@ -53,7 +60,6 @@
                         </div>
                         </fieldset>
                     </form>
-
                     {{-- ACTUAL CONTACT FORM ENDS HERE --}}
 
                 </div>
