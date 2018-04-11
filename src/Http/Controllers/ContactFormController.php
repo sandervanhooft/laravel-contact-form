@@ -34,4 +34,11 @@ class ContactFormController extends Controller
             ->bcc(config('mail.from.address'))
             ->send(new MessageReceived($inquiry));
     }
+
+    protected function sendMailNotification($inquiry)
+    {
+        Mail::to($inquiry->email)
+            ->bcc(config('contactform.from.address'))
+            ->send(new MessageReceived($inquiry));
+    }
 }

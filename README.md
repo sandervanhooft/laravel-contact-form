@@ -18,7 +18,10 @@ composer require sandervanhooft/laravel-contact-form
 php artisan vendor:publish “SanderVanHooft\ContactForm\ServiceProvider” —tag=config
 ```
 
-Now set the e-mail address the contact form should send the mails to in the contact_form.php config file.
+Optional: alter configuration (route, from-mail-address).
+```
+php artisan vendor:publish “SanderVanHooft\ContactForm\ServiceProvider” —tag=config
+```
 
 ## Publishing the form’s views
 ```
