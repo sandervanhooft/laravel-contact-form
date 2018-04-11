@@ -26,3 +26,7 @@ php artisan vendor:publish “SanderVanHooft\ContactForm\ServiceProvider” —t
 ```
 php artisan vendor:publish “SanderVanHooft\ContactForm\ServiceProvider” —tag=views
 ```
+
+## Create your first Laravel package
+This package is part of the Laravel package development from scratch course.
+You can join for free [here](https://go.sandervanhooft.com/courses/laravel-package-dev-from-scratch).
