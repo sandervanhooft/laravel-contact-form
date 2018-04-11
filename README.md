@@ -13,10 +13,10 @@ This package brings you a basic drop-in contact form solution.
 
 ## Installation
 
-‘composer require sandervanhooft/laravel-contact-form’
-‘php artisan vendor:publish “SanderVanHooft\ContactForm\ServiceProvider” —tag=config’
+`composer require sandervanhooft/laravel-contact-form`
+`php artisan vendor:publish “SanderVanHooft\ContactForm\ServiceProvider” —tag=config`
 
 Now set the e-mail address the contact form should send the mails to in the contact_form.php config file.
 
 ## Publishing the form’s views
-‘php artisan vendor:publish “SanderVanHooft\ContactForm\ServiceProvider” —tag=views’
+`php artisan vendor:publish “SanderVanHooft\ContactForm\ServiceProvider” —tag=views`
