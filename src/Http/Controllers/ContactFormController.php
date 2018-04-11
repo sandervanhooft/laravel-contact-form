@@ -25,20 +25,20 @@ class ContactFormController extends Controller
         $this->sendMailNotification((object) $results);
 
         $request->session()->flash('status', "Thank you! We'll get back to you within 24 hours.");
-        return redirect()->route('contactform.create');
+        return redirect()->route(config('contactform.route_create_name'));
     }
+
+    // protected function sendMailNotification($inquiry)
+    // {
+    //     Mail::to($inquiry->email)
+    //         ->bcc(config('mail.from.address'))
+    //         ->send(new MessageReceived($inquiry));
+    // }
 
     protected function sendMailNotification($inquiry)
     {
         Mail::to($inquiry->email)
-            ->bcc(config('mail.from.address'))
-            ->send(new MessageReceived($inquiry));
-    }
-
-    protected function sendMailNotification($inquiry)
-    {
-        Mail::to($inquiry->email)
-            ->bcc(config('contactform.from.address'))
+            ->bcc(config('contactform.from_address'))
             ->send(new MessageReceived($inquiry));
     }
 }

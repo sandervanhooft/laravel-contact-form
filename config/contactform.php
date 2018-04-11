@@ -1,19 +1,14 @@
 <?php
 
 return [
-    'from' => [
-        'address' => config('mail.from.address'),
-        'name' => config('mail.from.name'),
-    ],
-    'route_create' => [
-        'url' => '/contact',
-        'name' => 'contactform.create',
-    ],
-    'route_store' => [
-        'url' => '/contact',
-        'name' => 'contactform.store',
-    ],
-    'view' => [
-        'section_key' => 'content',
-    ],
+    'from_address' => config('mail.from.address'),
+    'from_name' => config('mail.from.name'),
+
+    'route_create_name' => 'contactform.create',
+    'route_create_url' => '/contact',
+
+    'route_store_name' => 'contactform.store',
+    'route_store_url' => '/contact',
+
+    'view_section_key' => 'content',
 ];

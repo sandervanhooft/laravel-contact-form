@@ -9,7 +9,7 @@
                 <div class="card-body">
 
                     {{-- ACTUAL CONTACT FORM STARTS HERE --}}
-                    <form class="form-horizontal" action="{{ route(config('contactform.route_store.name')) }}" method="post">
+                    <form class="form-horizontal" action="{{ route(config('contactform.route_store_name')) }}" method="post">
                         @csrf
                         <fieldset>
                         <legend class="text-center">Contact us</legend>
