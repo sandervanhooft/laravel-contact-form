@@ -13,6 +13,14 @@ class ServiceProvider extends Base
      */
     public function boot()
     {
+        $this->publishes([
+            __DIR__.'/../config/contactform.php' => config_path('contactform.php'),
+        ], 'config');
+
+        $this->publishes([
+            __DIR__.'/../resources/views' => resource_path('views/vendor/contactform'),
+        ], 'views');
+
         $this->loadRoutesFrom(__DIR__.'/../routes/web.php');
         $this->loadViewsFrom(__DIR__.'/../resources/views', 'contactform');
     }
@@ -24,6 +32,6 @@ class ServiceProvider extends Base
      */
     public function register()
     {
-        //
+        $this->mergeConfigFrom(__DIR__.'/../config/contactform.php', 'contactform');
     }
 }

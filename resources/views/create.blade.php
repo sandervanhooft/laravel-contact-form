@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('content')
+@section(config('contactform.view.section_key', 'content'))
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -9,7 +9,7 @@
                 <div class="card-body">
 
                     {{-- ACTUAL CONTACT FORM STARTS HERE --}}
-                    <form class="form-horizontal" action="{{ route('contactform.create') }}" method="post">
+                    <form class="form-horizontal" action="{{ route(config('contactform.route_store.name')) }}" method="post">
                         @csrf
                         <fieldset>
                         <legend class="text-center">Contact us</legend>
