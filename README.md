@@ -15,7 +15,6 @@ This package brings you a basic drop-in contact form solution.
 
 ```
 composer require sandervanhooft/laravel-contact-form
-php artisan vendor:publish “SanderVanHooft\ContactForm\ServiceProvider” —tag=config
 ```
 
 Optional: alter configuration (route, from-mail-address).
